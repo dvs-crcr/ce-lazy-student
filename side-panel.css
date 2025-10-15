@@ -1,0 +1,176 @@
+/* side-panel.css - Simplified styles for the side panel */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.side-panel-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+/* Main content */
+.panel-main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Button section */
+.button-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.primary-button, .secondary-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.primary-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.primary-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+.primary-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.secondary-button {
+    background-color: #10a37f;
+    color: white;
+}
+
+.secondary-button:hover {
+    background-color: #0d8f6e;
+}
+
+.button-icon {
+    font-size: 16px;
+}
+
+.button-text {
+    font-size: 14px;
+}
+
+/* Status */
+.status-container {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    font-size: 13px;
+    text-align: center;
+    min-height: 20px;
+    transition: all 0.3s ease;
+}
+
+.status.loading {
+    background-color: #e3f2fd;
+    border-color: #2196f3;
+    color: #1976d2;
+}
+
+.status.success {
+    background-color: #e8f5e8;
+    border-color: #4caf50;
+    color: #2e7d32;
+}
+
+.status.error {
+    background-color: #ffebee;
+    border-color: #f44336;
+    color: #c62828;
+}
+
+.status.info {
+    background-color: #f3e5f5;
+    border-color: #9c27b0;
+    color: #7b1fa2;
+}
+
+/* Response section */
+.response-section {
+    margin-top: 20px;
+}
+
+.response-section h3 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #495057;
+    font-weight: 600;
+}
+
+.response-text {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    min-height: 200px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #495057;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+    }
+    
+    .side-panel-container {
+        background-color: #2d2d2d;
+    }
+    
+    .response-section h3 {
+        color: #fff;
+    }
+    
+    .response-text {
+        background-color: #3d3d3d;
+        border-color: #555;
+        color: #fff;
+    }
+    
+    .status-container {
+        background-color: #3d3d3d;
+        border-color: #555;
+        color: #fff;
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot to ChatGPT - Side Panel</title>
+    <link rel="stylesheet" href="side-panel.css">
+</head>
+<body>
+    <div class="side-panel-container">
+        <main class="panel-main">
+            <div class="button-section">
+                <button id="screenshotButton" class="primary-button">
+                    <span class="button-icon">📷</span>
+                    <span class="button-text">Сделать скриншот</span>
+                </button>
+            </div>
+
+            <div id="status" class="status-container"></div>
+
+            <div class="response-section">
+                <h3>Ответ от ChatGPT:</h3>
+                <div id="chatResponse" class="response-text">
+                    Сделайте скриншот и отправьте его в ChatGPT для получения ответа...
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="side-panel.js"></script>
+</body>
+</html>

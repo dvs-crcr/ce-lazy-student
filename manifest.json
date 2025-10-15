@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Screenshot to ChatGPT",
+  "version": "1.0.0",
+  "description": "Сделать скриншот страницы и отправить в ChatGPT для анализа",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "downloads",
+    "sidePanel"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Screenshot to ChatGPT"
+  },
+  "side_panel": {
+    "default_path": "side-panel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.mjs"
+  },
+  "host_permissions": [
+    "<all_urls>",
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*"
+  ]
+}

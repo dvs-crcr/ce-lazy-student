@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot to ChatGPT</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Screenshot to ChatGPT</h1>
+        <p>Настройте токен и выберите режим работы:</p>
+        
+        <div class="token-section">
+            <label for="apiToken" class="token-label">
+                🔑 OpenAI API Token:
+            </label>
+            <input type="password" id="apiToken" class="token-input" placeholder="sk-..." />
+            <div class="token-status" id="tokenStatus">
+                <span class="token-indicator" id="tokenIndicator">❌</span>
+                <span class="token-text" id="tokenText">Токен не установлен</span>
+            </div>
+        </div>
+        
+        <div class="mode-selector">
+            <button id="openSidePanelButton" class="primary-button">
+                <span class="button-icon">📱</span>
+                <span class="button-text">Открыть Side Panel</span>
+                <span class="button-subtitle">Полнофункциональный интерфейс</span>
+            </button>
+            
+        </div>
+        
+        <div id="status"></div>
+        
+        <div id="preview" class="preview-container" style="display: none;">
+            <h3>Предварительный просмотр:</h3>
+            <img id="previewImage" alt="Скриншот" />
+            <div class="preview-actions">
+                <button id="copyToClipboardButton" class="small-button">📋 Копировать</button>
+                <button id="downloadButton" class="small-button">💾 Скачать</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
